@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6578932470799132370}
-  - component: {fileID: 6578932470799132371}
   m_Layer: 0
   m_Name: WeaponPosition
   m_TagString: Untagged
@@ -32,24 +31,6 @@ Transform:
   m_Father: {fileID: 6578932471081383045}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6578932470799132371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6578932470799132397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c51b79a756bd8340a3c8db46c2c6243, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  range: 100
-  maxMagazineBullets: 10
-  fpsCam: {fileID: 6578932470832173226}
-  crosshairUI: {fileID: 0}
-  reloadUI: {fileID: 0}
 --- !u!1 &6578932470832173220
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +189,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ba538bf12d40f144da1ec5242660a675, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -240,6 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6578932471081383045}
   - component: {fileID: 6578932471081383044}
+  - component: {fileID: 1556899947}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -282,6 +264,27 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1556899947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6578932471081383047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c51b79a756bd8340a3c8db46c2c6243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  range: 100
+  maxMagazineBullets: 10
+  pointsPerShot: 10
+  fpsCam: {fileID: 6578932470832173226}
+  crosshairUI: {fileID: 0}
+  reloadUI: {fileID: 0}
+  scoreUI: {fileID: 0}
+  magazineUI: {fileID: 0}
 --- !u!1001 &6578932471024172866
 PrefabInstance:
   m_ObjectHideFlags: 0
