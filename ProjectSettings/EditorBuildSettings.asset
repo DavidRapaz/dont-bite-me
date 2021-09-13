@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/HighScores.unity
     guid: 9f09562345390c246925cbc3497c8e67
   - enabled: 1
-    path: Assets/Scenes/Levels/CityLevel.unity
+    path: Assets/Scenes/TestLevels/TestLevel_01.unity
     guid: 806162c695004244cb658f5b3533ce45
   m_configObjects: {}
