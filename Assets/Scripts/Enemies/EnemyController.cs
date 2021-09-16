@@ -8,18 +8,19 @@ public class EnemyController : MonoBehaviour
 
     public Slider healthBar;
 
-    [Header("Timer")]
-    public TimerManager timeManager;
+    [Header("Manager")]
+    public LevelManager levelManager;
 
-    void Start()
+    void Awake()
     {
-        timeManager = GameObject.Find("TimeManager").GetComponent<TimerManager>();
+        levelManager       = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         healthBar.maxValue = health;
+        healthBar.value    = health;
     }
 
     public void TakeDamage (string tag, float damage)
     {
-        health -= damage;
+        health -= (tag == "Enemy Head" ? damage * 2 : damage);
         healthBar.value = health;
 
         if (health <= 0f)
@@ -29,6 +30,6 @@ public class EnemyController : MonoBehaviour
     void Die ()
     {
         Destroy(gameObject);
-        timeManager.IncreaseTime();
+        levelManager.IncreaseTime();
     }
 }

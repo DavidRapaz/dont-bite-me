@@ -5,8 +5,8 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     [Header("Weapon Options")]
-    public float damage           = 10f;
-    public float range            = 100f;
+    public float damage = 10f;
+    public float range  = 100f;
 
     public int maxMagazineBullets = 10;
 
@@ -31,16 +31,17 @@ public class PlayerController : MonoBehaviour
     {
         _magazine       = maxMagazineBullets;
         _score          = 0;
+        scoreUI.text    = string.Format("0");
         magazineUI.text = string.Format("{0} / {1}", _magazine, maxMagazineBullets);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && _magazine != 0)
+        if (Input.GetButtonDown("Fire1") && _magazine != 0 && Time.timeScale != 0)
             Shoot();
 
-        if (Input.GetButtonDown("Reload"))
+        if (Input.GetButtonDown("Reload") && _magazine == 0)
             Reload();
     }
 

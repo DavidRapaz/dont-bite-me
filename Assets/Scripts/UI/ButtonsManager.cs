@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -20,16 +18,17 @@ public class ButtonsManager : MonoBehaviour
 
     void _Play ()
     {
-        SceneManager.LoadScene("CityLevel");
+        SceneManager.LoadScene("level_01");
     }
 
     void _ShowScores ()
     {
-        SceneManager.LoadScene("HighScores");
+        SceneManager.LoadScene("HighScore");
     }
 
     void _Quit()
     {
-
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
